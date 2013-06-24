@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ShareSDK/ShareSDK.h>
 
-@interface ViewController : UIViewController
+@class AGAppDelegate;
+
+@interface ViewController : UIViewController<UIActionSheetDelegate>
+{
+    
+@private
+    AGAppDelegate *_appDelegate;
+}
+@property (retain, nonatomic) IBOutlet UISwitch *facebookOAuthSwitch;
+@property (retain, nonatomic) IBOutlet UIImageView *facebookImageView;
+
+
+-(IBAction)clickShareButton:(id)sender;
 
 @end
